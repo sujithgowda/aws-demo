@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Olb.Api", "Olb.Api\Olb.Api.csproj", "{B89C7D3D-286F-42D8-A187-B3E23AF796DC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Olb.Ui", "Olb.Ui\", "{3A033223-132A-4013-9AA0-F877855E57C9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56293"
+		Debug.AspNetCompiler.PhysicalPath = "Olb.Ui\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56293\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56293"
+		Release.AspNetCompiler.PhysicalPath = "Olb.Ui\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56293\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56293"
+		SlnRelativePath = "Olb.Ui\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B89C7D3D-286F-42D8-A187-B3E23AF796DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89C7D3D-286F-42D8-A187-B3E23AF796DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89C7D3D-286F-42D8-A187-B3E23AF796DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89C7D3D-286F-42D8-A187-B3E23AF796DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A033223-132A-4013-9AA0-F877855E57C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A033223-132A-4013-9AA0-F877855E57C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A033223-132A-4013-9AA0-F877855E57C9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A033223-132A-4013-9AA0-F877855E57C9}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F958BCB-7052-487D-8379-DE78C7102690}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h2>
+    Accounts
+  </h2>
+  <button (click)="getAllAccounts()">Get All Accounts</button>
+</div>
+  <ul *ngIf="accounts.length>0">
+    <li *ngFor="let account of accounts">
+      {{account}}
+    </li>
+  </ul>
+  <div style="color:red" *ngIf="isError">
+    Error fetching accounts list
+  </div>
