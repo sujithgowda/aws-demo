@@ -5,18 +5,35 @@ import { Http } from '@angular/http';
   templateUrl: './accounts.component.html'
 })
 export class AccountsComponent {
-  accounts: Array<string> = [];
-  isError: boolean;
+  accountsForAsp: Array<string> = [];
+  accountsForNode: Array<string> = [];
+  isErrorForAsp: boolean;
+  isErrorForNode: boolean;
+  apiRoundTripTimeForAsp: number;
+  apiRoundTripTimeForNode: number;
   constructor(private http: Http) {
 
   }
-  getAllAccounts() {
+  getAllAccountsForAsp() {
+    let currentTime = Date.now();
+   
     this.http.get("https://9z40o4b8r5.execute-api.us-east-1.amazonaws.com/Dev1/api/accounts").subscribe((data) => {
-      console.log(data.json());
-      this.accounts = data.json();
+      this.apiRoundTripTimeForAsp = Date.now() - currentTime;
+      this.accountsForAsp = data.json();
     },
       (error) => {
-        this.isError = true;
+        this.isErrorForAsp = true;
     })
+  }
+  getAllAccountsForNode() {
+    let currentTime = Date.now();
+    
+    this.http.get("https://vj6wkg5nx8.execute-api.us-east-1.amazonaws.com/Dev1/olbapinode").subscribe((data) => {
+      this.apiRoundTripTimeForNode = Date.now() - currentTime;
+      this.accountsForNode = data.json();
+    },
+      (error) => {
+        this.isErrorForNode = true;
+      })
   }
 }

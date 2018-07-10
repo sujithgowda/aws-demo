@@ -1,0 +1,11 @@
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\bin\Debug\netcoreapp2.0\Olb.Api.deps.json
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\bin\Debug\netcoreapp2.0\Olb.Api.runtimeconfig.json
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\bin\Debug\netcoreapp2.0\Olb.Api.runtimeconfig.dev.json
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\bin\Debug\netcoreapp2.0\Olb.Api.dll
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\bin\Debug\netcoreapp2.0\Olb.Api.pdb
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\obj\Debug\netcoreapp2.0\Olb.Api.csprojResolveAssemblyReference.cache
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\obj\Debug\netcoreapp2.0\Olb.Api.csproj.CoreCompileInputs.cache
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\obj\Debug\netcoreapp2.0\Olb.Api.AssemblyInfoInputs.cache
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\obj\Debug\netcoreapp2.0\Olb.Api.AssemblyInfo.cs
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\obj\Debug\netcoreapp2.0\Olb.Api.dll
+D:\AWS\OlbDemo\OlbDemo\Olb.Api\obj\Debug\netcoreapp2.0\Olb.Api.pdb

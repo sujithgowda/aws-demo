@@ -3,13 +3,53 @@
   <h2>
     Accounts
   </h2>
-  <button (click)="getAllAccounts()">Get All Accounts</button>
-</div>
-  <ul *ngIf="accounts.length>0">
-    <li *ngFor="let account of accounts">
-      {{account}}
-    </li>
-  </ul>
-  <div style="color:red" *ngIf="isError">
-    Error fetching accounts list
+  <div style="width:100%">
+    <table style="align-self:center;width:100%">
+      <tr>
+        <td>
+          <button (click)="getAllAccountsForAsp()" style="padding:10px;margin:10px">Get All Accounts from .net core api</button>
+        </td>
+        <td>
+          <button (click)="getAllAccountsForNode()" style="padding:10px;margin:10px">Get All Accounts from nodejs api</button>
+        </td>
+      </tr>
+      <tr>
+        <td><div>Total time taken in ms - {{apiRoundTripTimeForAsp}}</div></td>
+        <td><div>Total time taken in ms - {{apiRoundTripTimeForNode}}</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div *ngIf="accountsForAsp.length>0">
+            <div *ngFor="let account of accountsForAsp">
+              {{account}}
+            </div>
+          </div>
+        </td>
+        <td>
+          <div *ngIf="accountsForNode.length>0">
+            <div *ngFor="let account of accountsForNode">
+              {{account}}
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="color:red" *ngIf="isErrorForAsp">
+            Error fetching accounts list
+          </div>
+        </td>
+        <td>
+          <div style="color:red" *ngIf="isErrorForNode">
+            Error fetching accounts list
+          </div>
+        </td>
+      </tr>
+    </table>
+
   </div>
+ 
+</div>
+ 
+
+  
