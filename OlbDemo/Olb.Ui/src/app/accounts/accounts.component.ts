@@ -7,10 +7,13 @@ import { Http } from '@angular/http';
 export class AccountsComponent {
   accountsForAsp: Array<string> = [];
   accountsForNode: Array<string> = [];
+  sessionResponse:string;
   isErrorForAsp: boolean;
   isErrorForNode: boolean;
+  isErrorForSession: boolean;
   apiRoundTripTimeForAsp: number;
   apiRoundTripTimeForNode: number;
+  apiRoundTripTimeForSession: number;
   constructor(private http: Http) {
 
   }
@@ -34,6 +37,17 @@ export class AccountsComponent {
     },
       (error) => {
         this.isErrorForNode = true;
+      })
+  }
+
+  createSession() {
+    let currentTime = Date.now();
+    this.http.get("https://9z40o4b8r5.execute-api.us-east-1.amazonaws.com/Dev1/api/session").subscribe((data) => {
+      this.apiRoundTripTimeForSession = Date.now() - currentTime;
+      this.sessionResponse = data['_body'];
+    },
+      (error) => {
+        this.isErrorForSession = true;
       })
   }
 }

@@ -23,7 +23,7 @@ namespace Olb.Api.Controllers
         [HttpGet]
         public object Get()
         {
-            HttpContext.Response.Cookies.Append("DemoCookie", "DummyValue");
+            //HttpContext.Response.Cookies.Append("DemoCookie", "DummyValue");
             //return new string[] { "Account1", "Account2", "Account3" };
             return configuration.GetSection("MockAccounts").GetChildren().ToArray().Select(c => c.Value).ToArray();
         }

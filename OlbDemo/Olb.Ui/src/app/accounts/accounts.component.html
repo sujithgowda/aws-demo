@@ -5,6 +5,10 @@
   </h2>
   <div style="width:100%">
     <table style="align-self:center;width:100%">
+      <tr><td>
+        <button (click)="createSession()">Create Session</button>
+        </td>
+          <td>{{sessionResponse}}</td></tr>
       <tr>
         <td>
           <button (click)="getAllAccountsForAsp()" style="padding:10px;margin:10px">Get All Accounts from .net core api</button>
