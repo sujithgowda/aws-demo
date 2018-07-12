@@ -33,7 +33,7 @@ export class AccountsComponent {
   getAllAccountsForNode() {
     let currentTime = Date.now();
     
-    this.http.get(this.endpointUrl+"/olbapinode").subscribe((data) => {
+    this.http.get("https://vj6wkg5nx8.execute-api.us-east-1.amazonaws.com/Dev1/olbapinode").subscribe((data) => {
       this.apiRoundTripTimeForNode = Date.now() - currentTime;
       this.accountsForNode = data.json();
     },
