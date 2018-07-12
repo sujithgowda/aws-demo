@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptionsArgs } from '@angular/http';
 
 @Component({  
   templateUrl: './accounts.component.html'
@@ -14,13 +14,15 @@ export class AccountsComponent {
   apiRoundTripTimeForAsp: number;
   apiRoundTripTimeForNode: number;
   apiRoundTripTimeForSession: number;
-  constructor(private http: Http) {
+  endpointUrl:string;
 
+  constructor(private http: Http) {
+    this.endpointUrl = 'https://9z40o4b8r5.execute-api.us-east-1.amazonaws.com/Dev1/api';
   }
   getAllAccountsForAsp() {
     let currentTime = Date.now();
-   
-    this.http.get("https://9z40o4b8r5.execute-api.us-east-1.amazonaws.com/Dev1/api/accounts").subscribe((data) => {
+
+    this.http.get(this.endpointUrl+"/accounts").subscribe((data) => {
       this.apiRoundTripTimeForAsp = Date.now() - currentTime;
       this.accountsForAsp = data.json();
     },
@@ -31,7 +33,7 @@ export class AccountsComponent {
   getAllAccountsForNode() {
     let currentTime = Date.now();
     
-    this.http.get("https://vj6wkg5nx8.execute-api.us-east-1.amazonaws.com/Dev1/olbapinode").subscribe((data) => {
+    this.http.get(this.endpointUrl+"/olbapinode").subscribe((data) => {
       this.apiRoundTripTimeForNode = Date.now() - currentTime;
       this.accountsForNode = data.json();
     },
@@ -41,10 +43,11 @@ export class AccountsComponent {
   }
 
   createSession() {
+   // let reqOptions: RequestOptionsArgs = new RequestOptionsArgs();
     let currentTime = Date.now();
-    this.http.get("https://9z40o4b8r5.execute-api.us-east-1.amazonaws.com/Dev1/api/session").subscribe((data) => {
+    this.http.get(this.endpointUrl+"/session", { withCredentials:true }).subscribe((data) => {
       this.apiRoundTripTimeForSession = Date.now() - currentTime;
-      this.sessionResponse = data['_body'];
+      this.sessionResponse = data['_body'] + " Total time taken in ms: " + this.apiRoundTripTimeForSession;
     },
       (error) => {
         this.isErrorForSession = true;
